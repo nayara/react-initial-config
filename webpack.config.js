@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const rules = [
   {
-    test: /\.js$/,
+    test: /\.(js|jsx)$/,
     exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
@@ -23,6 +23,9 @@ module.exports = {
     path: path.resolve(__dirname, './build')
   },
   module: { rules },
+  resolve: {
+    extensions: [".js", ".jsx", '.css']
+  },
   plugins: [
     new HTMLWebpackPlugin({
       template: './public/index.html'

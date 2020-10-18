@@ -5,10 +5,13 @@ module.exports = {
     "**/__tests__/**/*.[jt]s?(x)",
     "**/?(*.)+(spec|test).[tj]s?(x)"
   ],
+  moduleNameMapper: {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
   testPathIgnorePatterns: [
     "/node_modules/"
   ],
   setupFilesAfterEnv: [
-    "<rootDir>/src/setupTests.js"
+    "<rootDir>/setupTests.js"
   ]
 };
