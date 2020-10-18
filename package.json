@@ -15,6 +15,12 @@
     "@testing-library/react": "^11.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "html-webpack-plugin": "^4.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.5.3",
@@ -24,8 +30,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack serve --mode=development",
     "build": "webpack",
+    "lint": "eslint --ext .js,.jsx src/ --fix",
+    "start": "webpack serve --mode=development",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
