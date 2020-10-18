@@ -16,6 +16,7 @@ const rules = [
 ]
 
 module.exports = {
+  mode: 'development',
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     filename: 'bundle.js',
